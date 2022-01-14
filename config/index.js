@@ -1,5 +1,5 @@
 const config = {
-  projectName: "WaterPurifier",
+  projectName: "taro3-react-template",
   date: "2022-1-14",
   designWidth: 750,
   deviceRatio: {
@@ -56,8 +56,10 @@ const config = {
   },
 };
 
+console.log('构建环境变量: ', process.env.BUILD_ENV)
+
 module.exports = function (merge) {
-  if (process.env.NODE_ENV === "development") {
+  if (process.env.NODE_ENV === "dev") {
     return merge({}, config, require("./dev"));
   }
   return merge({}, config, require("./prod"));
