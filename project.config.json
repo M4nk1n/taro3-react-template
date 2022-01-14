@@ -1,7 +1,7 @@
 {
   "miniprogramRoot": "dist/",
-  "projectname": "WaterPurifier",
-  "description": "Supor Water Purifier",
+  "projectname": "taro3-react-template",
+  "description": "Taro3 React Template",
   "appid": "touristappid",
   "setting": {
     "urlCheck": true,

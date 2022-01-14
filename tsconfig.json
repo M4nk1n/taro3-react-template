@@ -16,10 +16,13 @@
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "react",
+    "jsxFactory": "React.createElement",
     "allowJs": true,
     "resolveJsonModule": true,
     "typeRoots": [
       "node_modules/@types",
+      "node_modules/miniprogram-api-typings",
+      "node_modules/mini-types",
       "global.d.ts"
     ]
   },
