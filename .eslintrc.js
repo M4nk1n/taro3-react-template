@@ -67,4 +67,4 @@ module.exports = {
     useJSXTextNode: true,
     project: './tsconfig.json',
   },
-};
+}

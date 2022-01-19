@@ -1,3 +1,5 @@
+import { resolve } from 'path'
+
 const config = {
   projectName: "taro3-react-template",
   date: "2022-1-14",
@@ -9,6 +11,10 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
+	// 解析alias路径
+	alias: {
+		'@': resolve(__dirname, '..', 'src/_resources'),
+	},
   plugins: [],
   defineConstants: {},
   copy: {
@@ -40,6 +46,9 @@ const config = {
   h5: {
     publicPath: "/",
     staticDirectory: "static",
+		router: {
+			mode: 'browser', // 使用 history 模式
+		},
     postcss: {
       autoprefixer: {
         enable: true,
@@ -54,13 +63,13 @@ const config = {
       },
     },
   },
-};
+}
 
 console.log('构建环境变量: ', process.env.BUILD_ENV)
 
-module.exports = function (merge) {
+export default function (merge) {
   if (process.env.NODE_ENV === "dev") {
-    return merge({}, config, require("./dev"));
+    return merge({}, config, require("./dev"))
   }
-  return merge({}, config, require("./prod"));
-};
+  return merge({}, config, require("./prod"))
+}

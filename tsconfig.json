@@ -24,11 +24,11 @@
       "node_modules/miniprogram-api-typings",
       "node_modules/mini-types",
       "global.d.ts"
-    ]
+    ],
+    "paths": {
+			"@/*": ["src/_resources/*"]
+		}
   },
-  "exclude": [
-    "node_modules",
-    "dist"
-  ],
+  "exclude": ["node_modules", "dist"],
   "compileOnSave": false
 }
