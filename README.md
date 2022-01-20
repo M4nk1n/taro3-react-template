@@ -1,6 +1,6 @@
 # Taro 3.x 项目模板
 
-开箱即用的基于 Taro3 的 React 框架多端项目模版。
+基于 Taro3 + React + mobx 的开箱即用多端项目模版。
 
 ## 技术栈
 
@@ -11,7 +11,7 @@
 
 ## 支持特性
 
-- 💡 使用 pnpm 管理依赖
+- 💡 使用 pnpm 管理依赖(未完全支持，暂时需要使用 `pnpm install --shamefully-hoist` 来安装依赖)
 - 🏠 基于 Taro3
 - 📦 支持 React
 - 🐑 CSS 预处理器( SCSS )
