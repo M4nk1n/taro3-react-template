@@ -1,23 +1,30 @@
-import { observable } from 'mobx'
+import { observable, runInAction } from 'mobx'
 
 const counterStore = observable({
   counter: 0,
+  other: 0,
 
-  counterStore() {
-    this.counter++
+  updateInAction: () => {
+    runInAction(() => {
+      counterStore.counter++
+      counterStore.other--
+    })
   },
 
-  increment() {
-    this.counter++
+  increment: () => {
+    counterStore.counter++
+    counterStore.other++
   },
 
-  decrement() {
-    this.counter--
+  decrement: () => {
+    counterStore.counter--
+    counterStore.other--
   },
 
-  incrementAsync() {
+  incrementAsync: () => {
     setTimeout(() => {
-      this.counter++
+      counterStore.counter++
+      counterStore.other++
     }, 1000)
   }
 })

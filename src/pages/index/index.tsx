@@ -1,5 +1,5 @@
 import React, { useCallback } from 'react'
-import { useObserver } from 'mobx-react'
+import { useLocalStore, useObserver } from 'mobx-react'
 import { useEnv, useNavigationBar, useModal, useToast } from "taro-hooks"
 import { View, Text, Button, Image } from "@tarojs/components"
 
@@ -27,6 +27,15 @@ const Index = (): JSX.Element => {
     })
   }, [show, showToast])
 
+  const renderCounter = useLocalStore(() => ({
+    counter: 0,
+    increment() {
+      renderCounter.counter++
+    }
+  }))
+  console.log(`run time: ${renderCounter.counter}`)
+  renderCounter.increment()
+
   return useObserver(() =>
     <View className='wrapper'>
       <Image className='logo' src={logo} />
@@ -37,8 +46,13 @@ const Index = (): JSX.Element => {
       <View className='list'>
         <Text className='label'>Coune:</Text>
         <Text className='note'>{store.app.counter}</Text>
+        <Text className='note'> | </Text>
+        <Text className='note'>{store.app.other}</Text>
       </View>
       <View className='list'>
+        <Button className='button' onClick={() => store.app.updateInAction()}>
+          updateInAction
+        </Button>
         <Button className='button' onClick={() => store.app.increment()}>
           Increment
         </Button>
