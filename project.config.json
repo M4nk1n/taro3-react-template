@@ -1,8 +1,11 @@
 {
-  "miniprogramRoot": "dist/",
   "projectname": "taro3-react-template",
   "description": "Taro3 React Template",
   "appid": "touristappid",
+  "compileType": "miniprogram",
+  "simulatorType": "wechat",
+  "simulatorPluginLibVersion": {},
+  "miniprogramRoot": "dist/",
   "setting": {
     "urlCheck": true,
     "es6": false,
@@ -16,8 +19,5 @@
     "scopeDataCheck": false,
     "useCompilerModule": false
   },
-  "compileType": "miniprogram",
-  "simulatorType": "wechat",
-  "simulatorPluginLibVersion": {},
   "condition": {}
 }

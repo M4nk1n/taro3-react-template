@@ -25,6 +25,11 @@
       "node_modules/mini-types",
       "global.d.ts"
     ],
+    "types": [
+      "@types",
+      "miniprogram-api-typings",
+      "mini-types"
+    ],
     "paths": {
       "@/*": ["src/_resources/*"]
     }

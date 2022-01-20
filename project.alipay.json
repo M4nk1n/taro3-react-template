@@ -1,0 +1,11 @@
+{
+  "projectname": "taro3-react-template",
+  "description": "Taro3 React Template",
+  "compileType": "miniprogram",
+  "miniprogramRoot": "dist/",
+  "enableAppxNg": true,
+  "axmlStrictCheck": false,
+  "enableHMR": true,
+  "enableNodeModuleBabelTransform": false,
+  "condition": {}
+}
