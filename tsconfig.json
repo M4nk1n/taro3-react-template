@@ -26,8 +26,8 @@
       "global.d.ts"
     ],
     "paths": {
-			"@/*": ["src/_resources/*"]
-		}
+      "@/*": ["src/_resources/*"]
+    }
   },
   "exclude": ["node_modules", "dist"],
   "compileOnSave": false

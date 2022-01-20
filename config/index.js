@@ -11,10 +11,10 @@ const config = {
   },
   sourceRoot: "src",
   outputRoot: "dist",
-	// 解析alias路径
-	alias: {
-		'@': resolve(__dirname, '..', 'src/_resources'),
-	},
+  // 解析alias路径
+  alias: {
+    '@': resolve(__dirname, '..', 'src/_resources'),
+  },
   plugins: [],
   defineConstants: {},
   copy: {
