@@ -30,6 +30,8 @@ specifiers:
   lint-staged: ^12.1.7
   mini-types: ^0.1.7
   miniprogram-api-typings: ^3.4.4
+  mobx: ^6.3.12
+  mobx-react: ^7.2.1
   prettier: ^2.5.1
   pretty-quick: ^3.1.3
   react: ^17.0.2
@@ -46,6 +48,8 @@ dependencies:
   '@tarojs/react': 3.4.0_react@17.0.2
   '@tarojs/runtime': 3.4.0
   '@tarojs/taro': 3.4.0
+  mobx: 6.3.12
+  mobx-react: 7.2.1_669b1e42b258bd2cd4755e495b844de0
   react: 17.0.2
   react-dom: 17.0.2_react@17.0.2
   taro-hooks: 1.5.1_@tarojs+taro@3.4.0+react@17.0.2
@@ -10929,6 +10933,47 @@ packages:
 
   /mobile-detect/1.4.5:
     resolution: {integrity: sha512-yc0LhH6tItlvfLBugVUEtgawwFU2sIe+cSdmRJJCTMZ5GEJyLxNyC/NIOAOGk67Fa8GNpOttO3Xz/1bHpXFD/g==}
+
+  /mobx-react-lite/3.2.3_669b1e42b258bd2cd4755e495b844de0:
+    resolution: {integrity: sha512-7exWp1FV0M9dP08H9PIeHlJqDw4IdkQVRMfLYaZFMmlbzSS6ZU6p/kx392KN+rVf81hH3IQYewvRGQ70oiwmbw==}
+    peerDependencies:
+      mobx: ^6.1.0
+      react: ^16.8.0 || ^17
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      mobx: 6.3.12
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /mobx-react/7.2.1_669b1e42b258bd2cd4755e495b844de0:
+    resolution: {integrity: sha512-LZS99KFLn75VWDXPdRJhILzVQ7qLcRjQbzkK+wVs0Qg4kWw5hOI2USp7tmu+9zP9KYsVBmKyx2k/8cTTBfsymw==}
+    peerDependencies:
+      mobx: ^6.1.0
+      react: ^16.8.0 || ^17
+      react-dom: '*'
+      react-native: '*'
+    peerDependenciesMeta:
+      react-dom:
+        optional: true
+      react-native:
+        optional: true
+    dependencies:
+      mobx: 6.3.12
+      mobx-react-lite: 3.2.3_669b1e42b258bd2cd4755e495b844de0
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+    dev: false
+
+  /mobx/6.3.12:
+    resolution: {integrity: sha512-5Hx2IjhBtySVQlSFe+sHczKgOQ+cCyi8hN2wEvWzpJEEMRflQoDzDwJJ+m7SBWBQhfrWMWb1RGZNk4X1XtxJkQ==}
+    dev: false
 
   /move-concurrently/1.0.1:
     resolution: {integrity: sha1-viwAX9oy4LKa8fBdfEszIUxwH5I=}
