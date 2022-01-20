@@ -1,7 +1,8 @@
 import React, { useCallback } from 'react'
-import { useLocalStore, useObserver } from 'mobx-react'
-import { View, Text, Button, Image } from "@tarojs/components"
+import { useObserver } from 'mobx-react'
 import { useEnv, useNavigationBar, useModal, useToast } from "taro-hooks"
+import { View, Text, Button, Image } from "@tarojs/components"
+
 import store from '@/store'
 
 import logo from "@/assets/hook.png"
@@ -26,8 +27,6 @@ const Index = (): JSX.Element => {
     })
   }, [show, showToast])
 
-  const localStore = useLocalStore(() => store.app)
-
   return useObserver(() =>
     <View className='wrapper'>
       <Image className='logo' src={logo} />
@@ -37,13 +36,13 @@ const Index = (): JSX.Element => {
       </View>
       <View className='list'>
         <Text className='label'>Coune:</Text>
-        <Text className='note'>{localStore.counter}</Text>
+        <Text className='note'>{store.app.counter}</Text>
       </View>
       <View className='list'>
-        <Button className='button' onClick={() => localStore.increment()}>
+        <Button className='button' onClick={() => store.app.increment()}>
           Increment
         </Button>
-        <Button className='button' onClick={() => localStore.incrementAsync()}>
+        <Button className='button' onClick={() => store.app.incrementAsync()}>
           IncrementAsync
         </Button>
       </View>
