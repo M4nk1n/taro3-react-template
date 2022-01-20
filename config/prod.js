@@ -1,6 +1,8 @@
 module.exports = {
   env: {},
-  defineConstants: {},
+  defineConstants: {
+    TARO_API_BASE: JSON.stringify('https://prod.xxx.com')
+  },
   mini: {},
   h5: {
     /**
