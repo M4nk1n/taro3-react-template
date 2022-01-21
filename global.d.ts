@@ -21,7 +21,7 @@ declare const process: {
 /**
  * 接口baseurl
  */
-declare const TARO_API_BASE: string
+declare const TARO_API_BASE: {[key: string]: string}
 
 declare const wx: {
   [key: string]: any

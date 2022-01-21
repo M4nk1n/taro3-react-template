@@ -15,7 +15,9 @@ const Constants = {
  */
 export const HOSTS = {
   // 接口请求 base
-  TARO_API_BASE: 'TARO_API_BASE',
+  DEV: 'API_BASE_DEV',
+  TEST: 'API_BASE_TEST',
+  PROD: 'API_BASE_PROD'
 }
 
 export default Constants

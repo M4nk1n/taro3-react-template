@@ -67,13 +67,13 @@ class BaseRequest {
     if (!hostKey) {
       throw '请指定service key'
     }
-    const hostUrl = TARO_API_BASE // 通过hostKey去配置文件中寻找对应的host
     header[Constants.INTERCEPTOR_HEADER] = {
       hostKey,
       hostUrl,
       showToast,
       resType,
       crossHeaderInterceptor,
+    const hostUrl = TARO_API_BASE[hostKey] // 通过hostKey去配置文件中寻找对应的host
     }
 
     // UPLOAD方法特殊处理

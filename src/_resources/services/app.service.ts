@@ -7,7 +7,7 @@ import { HOSTS } from '@/constants/index'
 class AppService extends BaseRequest {
   constructor() {
     super({
-      hostKey: HOSTS.TARO_API_BASE,
+      hostKey: HOSTS.DEV,
     })
   }
 
