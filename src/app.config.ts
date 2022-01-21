@@ -29,4 +29,9 @@ export default defineAppConfig({
     navigationBarTitleText: "WeChat",
     navigationBarTextStyle: "black",
   },
+	// 页面切换动画
+	animation: {
+		duration: 200, // 动画切换时间，单位毫秒
+		delay: 50, // 切换延迟时间，单位毫秒
+	}
 })
