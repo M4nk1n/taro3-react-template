@@ -69,7 +69,7 @@ console.log('构建环境变量: ', process.env.BUILD_ENV)
 
 // eslint-disable-next-line @typescript-eslint/explicit-module-boundary-types
 export default function (merge) {
-  if (process.env.NODE_ENV === "dev") {
+  if (process.env.BUILD_ENV === "dev") {
     return merge({}, config, require("./dev"))
   }
   return merge({}, config, require("./prod"))

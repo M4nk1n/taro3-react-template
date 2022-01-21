@@ -1,5 +1,5 @@
 module.exports = {
-  env: {},
+  env: { NODE_ENV: '"production"' },
   defineConstants: {
     TARO_API_BASE: JSON.stringify('https://prod.xxx.com')
   },
