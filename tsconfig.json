@@ -26,7 +26,6 @@
       "global.d.ts"
     ],
     "types": [
-      "@types",
       "miniprogram-api-typings",
       "mini-types"
     ],
