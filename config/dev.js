@@ -8,5 +8,10 @@ module.exports = {
     }
   },
   mini: {},
-  h5: {},
+  h5: {
+    devServer: {
+      port: '9001',
+      open: false
+    }
+  },
 }
