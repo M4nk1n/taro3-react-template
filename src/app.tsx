@@ -3,6 +3,7 @@ import { Provider } from 'mobx-react'
 
 import store from '@/store'
 import Router from '@/utils/router'
+import Page from '@/utils/page'
 
 import './app.scss'
 
@@ -11,7 +12,7 @@ class App extends Component {
   onPageNotFound(object: unknown): void {
     console.log('on page not found', object)
     Router.redirectTo({
-      url: 'pages/default/404',
+      url: Page.getRouters().notFound,
     })
   }
 

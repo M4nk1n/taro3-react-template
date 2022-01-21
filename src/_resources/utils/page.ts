@@ -6,8 +6,8 @@ class Pages {
    */
   getRouters() {
     return {
-      404: 'pages/default/404',
-      home: 'pages/index/index',    // 首页
+      notFound: '/pages/default/404',
+      home: '/pages/index/index',    // 首页
     }
   }
 
