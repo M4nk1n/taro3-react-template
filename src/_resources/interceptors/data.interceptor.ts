@@ -22,7 +22,7 @@ export default (chain: any) => {
       if (res.statusCode !== 200) {
         // 错误处理
         console.error(`接口异常: ${res.data.path}`, res.statusCode)
-        if (showToast) {
+        if (!!showToast) {
           Toast.info('很抱歉，数据临时丢失，请耐心等待修复')
         }
         return Promise.resolve('很抱歉，数据临时丢失，请耐心等待修复')
@@ -81,7 +81,7 @@ export default (chain: any) => {
         //     })
         //   }, 800)
         // }
-      } else if (!SUCC_LIST.includes(resultData.code) && showToast) {
+      } else if (!SUCC_LIST.includes(resultData.code) && !!showToast) {
         console.log('非登录失效的失败code', resultData)
         if (resultData.code === '50000') {
           Toast.info('系统开小差了')
