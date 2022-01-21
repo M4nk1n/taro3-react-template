@@ -12,10 +12,14 @@ export default {
       {
         pagePath: 'pages/index/index',
         text: '首页',
+        iconPath: './_resources/assets/tabbar/home.png',
+        selectedIconPath: './_resources/assets/tabbar/home_selected.png'
       },
       {
         pagePath: 'pages/user/index',
         text: '我的',
+        iconPath: './_resources/assets/tabbar/user.png',
+        selectedIconPath: './_resources/assets/tabbar/user_selected.png'
       },
     ],
   },
