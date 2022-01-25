@@ -30,7 +30,7 @@ specifiers:
   lint-staged: ^12.1.7
   mini-types: ^0.1.7
   miniprogram-api-typings: ^3.4.4
-  miniprogram-automator: ^0.11.0
+  miniprogram-automator-scripts: ^0.0.2
   mobx: ^4.8.0
   mobx-react: ^6.1.4
   prettier: ^2.5.1
@@ -49,7 +49,7 @@ dependencies:
   '@tarojs/react': 3.4.0_react@17.0.2
   '@tarojs/runtime': 3.4.0
   '@tarojs/taro': 3.4.0
-  miniprogram-automator: 0.11.0
+  miniprogram-automator-scripts: 0.0.2
   mobx: 4.15.7
   mobx-react: 6.3.1_8b4ec46fc9881879d30a91a4d90d8db7
   react: 17.0.2
@@ -11274,6 +11274,16 @@ packages:
   /miniprogram-api-typings/3.4.4:
     resolution: {integrity: sha512-vT4avEJxCnscNXjY3rI0dNtU1tf/mNll9RhAS0uS+eN5IdQ7MrnG5thGOxjoWnDJSiPYLG912IMcf6KKsXEDAQ==}
 
+  /miniprogram-automator-scripts/0.0.2:
+    resolution: {integrity: sha512-iMKfPbrvsYWBAdPxLP7ZatyzX0kBI+D3+BjgGA1LN2U7UqeEzVN+bTtA25SZbcy6d/ydTLQdnpLLsh5+kDFD7w==}
+    hasBin: true
+    dependencies:
+      miniprogram-automator: 0.11.0
+      youtils-node: 0.0.1
+    transitivePeerDependencies:
+      - supports-color
+    dev: false
+
   /miniprogram-automator/0.11.0:
     resolution: {integrity: sha512-8nmOBJmVRDjaRLc2lw4u2l8j3NKDMesBd5UmJW5LpktuKDF7LCtSJfGVjxD9bOetp9qqcZuPK+3JTFI570PevA==}
     dependencies:
@@ -16425,6 +16435,10 @@ packages:
   /yocto-queue/0.1.0:
     resolution: {integrity: sha512-rVksvsnNCdJ/ohGc6xgPwyN8eheCxsiLM8mxuE/t/mOVqJewPuO1miLpTHQiRgTKCLexL4MeAFVagts7HmNZ2Q==}
     engines: {node: '>=10'}
+
+  /youtils-node/0.0.1:
+    resolution: {integrity: sha512-P2veN+9YeTOfTtaBW8kLZ8gg9Czkd4YCfUU1rms6cUE7///IeLzrT40yK0R5b5ECEBIyLOx6L1kmlt4Sxtq1sg==}
+    dev: false
 
   /zwitch/1.0.5:
     resolution: {integrity: sha512-V50KMwwzqJV0NpZIZFwfOD5/lyny3WlSzRiXgA0G7VUnRlqttta1L6UQIHzd6EuBY/cHGfwTIck7w1yH6Q5zUw==}
