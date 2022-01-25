@@ -1,4 +1,5 @@
 import Taro from '@tarojs/taro'
+import { isWeb } from '@/utils/tools'
 
 interface UseNavigationBarInfoPresets {
   menuButtonInfo: Taro.getMenuButtonBoundingClientRect.Rect
@@ -20,9 +21,17 @@ interface INavigationBarInfo {
 export const useNavigationBarInfo = (
   presets: UseNavigationBarInfoPresets = {} as any
 ): INavigationBarInfo => {
-  const menuButtonInfo =
-    presets.menuButtonInfo || Taro.getMenuButtonBoundingClientRect()
   const systemInfo = presets.systemInfo || Taro.getSystemInfoSync()
+  const menuButtonInfo =
+    presets.menuButtonInfo || (
+      !isWeb() && Taro.canIUse('getMenuButtonBoundingClientRect') ?
+        Taro.getMenuButtonBoundingClientRect()
+        : {
+          top: 0,
+          height: 40,
+          width: 160
+        }
+    )
   const { statusBarHeight } = systemInfo
   let navigationContentHeight = 40
   navigationContentHeight =
@@ -31,8 +40,8 @@ export const useNavigationBarInfo = (
   return {
     navigationBarHeight: statusBarHeight + navigationContentHeight,
     navigationContentHeight,
-    menuButtonHeight: menuButtonInfo.height,
-    navigationPaddding: systemInfo.windowWidth - menuButtonInfo.right,
+    menuButtonHeight: menuButtonInfo.height - 10,
+    navigationPaddding: menuButtonInfo.right === undefined ? 4 : (systemInfo.windowWidth - menuButtonInfo.right),
     statusBarHeight: systemInfo.statusBarHeight,
     menuButtonWidth: menuButtonInfo.width,
   }
