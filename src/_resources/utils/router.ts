@@ -1,5 +1,6 @@
 import Taro, { getCurrentPages } from '@tarojs/taro'
 import { transParams } from '@/utils/tools'
+import { list } from '@/../custom-tab-bar'
 
 /**
  * 路由配置对象
@@ -129,6 +130,17 @@ class Route {
     return currentPages.length
       ? currentPages[currentPages.length - 1].route
       : ''
+  }
+
+  /**
+   * 返回首页
+   */
+  backToHome() {
+    if (!!list) {
+      this.switchTab({
+        url: `/${list[0].pagePath.split('.')[0]}`,
+      })
+    }
   }
 }
 

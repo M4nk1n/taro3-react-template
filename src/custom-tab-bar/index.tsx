@@ -9,7 +9,7 @@ interface TabbarItem {
   text: string
 }
 
-const list: TabbarItem[] = [
+export const list: TabbarItem[] = [
   {
     pagePath: 'pages/index/index',
     text: '首页',
