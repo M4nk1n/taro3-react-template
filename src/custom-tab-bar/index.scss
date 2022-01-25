@@ -1,3 +1,5 @@
+@import '@/styles/var.scss';
+
 .tabbar-container {
   display: flex;
   align-items: center;
@@ -14,7 +16,7 @@
 
     &-selected {
       .tabbar-item-text {
-        color: #ff0036;
+        color: $color-success-normal;
       }
     }
 
