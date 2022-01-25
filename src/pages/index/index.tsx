@@ -2,6 +2,7 @@ import React, { useCallback } from 'react'
 import { useLocalStore, useObserver } from 'mobx-react'
 import { useEnv, useNavigationBar, useModal, useToast } from "taro-hooks"
 import { View, Text, Button, Image } from "@tarojs/components"
+import NavigationBar from '@/components/navbar'
 
 import store from '@/store'
 
@@ -37,35 +38,39 @@ const Index = (): JSX.Element => {
   renderCounter.increment()
 
   return useObserver(() =>
-    <View className='wrapper'>
-      <Image className='logo' src={logo} />
-      <View className='list'>
-        <Text className='label'>运行环境</Text>
-        <Text className='note'>{env}</Text>
-      </View>
-      <View className='list'>
-        <Text className='label'>Coune:</Text>
-        <Text className='note'>{store.app.counter}</Text>
-        <Text className='note'> | </Text>
-        <Text className='note'>{store.app.other}</Text>
-      </View>
-      <View className='list'>
-        <Button className='button' onClick={() => store.app.updateInAction()}>
-          updateInAction
+    <View className='page'>
+      <NavigationBar title='Demo' />
+
+      <View className='wrapper'>
+        <Image className='logo' src={logo} />
+        <View className='list'>
+          <Text className='label'>运行环境</Text>
+          <Text className='note'>{env}</Text>
+        </View>
+        <View className='list'>
+          <Text className='label'>Coune:</Text>
+          <Text className='note'>{store.app.counter}</Text>
+          <Text className='note'> | </Text>
+          <Text className='note'>{store.app.other}</Text>
+        </View>
+        <View className='list'>
+          <Button className='button' onClick={() => store.app.updateInAction()}>
+            updateInAction
+          </Button>
+          <Button className='button' onClick={() => store.app.increment()}>
+            Increment
+          </Button>
+          <Button className='button' onClick={() => store.app.incrementAsync()}>
+            IncrementAsync
+          </Button>
+        </View>
+        <Button className='button' onClick={() => setTitle("Taro Hooks Nice!")}>
+          设置标题
         </Button>
-        <Button className='button' onClick={() => store.app.increment()}>
-          Increment
-        </Button>
-        <Button className='button' onClick={() => store.app.incrementAsync()}>
-          IncrementAsync
+        <Button className='button' onClick={handleModal}>
+          使用Modal
         </Button>
       </View>
-      <Button className='button' onClick={() => setTitle("Taro Hooks Nice!")}>
-        设置标题
-      </Button>
-      <Button className='button' onClick={handleModal}>
-        使用Modal
-      </Button>
     </View>
   )
 }

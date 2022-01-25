@@ -1,3 +1,5 @@
+import Taro from "@tarojs/taro"
+
 /**
  * 转换 JSON 格式字符串为 url 拼接字符串
  * @param param JSON 形式的参数字符串
@@ -16,6 +18,11 @@ const transParams = (param: string): string => {
   return paramStr
 }
 
+const isWeb = (): boolean => {
+  return Taro.getEnv() === Taro.ENV_TYPE.WEB
+}
+
 export {
-  transParams
+  transParams,
+  isWeb
 }
