@@ -1,4 +1,7 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
+export PATH="/opt/homebrew/bin:/opt/homebrew/sbin:$PATH"
+export PATH="$HOME/.yarn/bin:$PATH"
+
 pnpx commitlint --edit $1
